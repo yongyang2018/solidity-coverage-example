@@ -6,9 +6,6 @@ const ethers = require('ethers')
 
 const api = new CoverageAPI()
 
-// 对代码进行插桩，把插桩后的 solidity 代码写入到 temp 文件夹下面
-instrument(api)
-
 // 读取原来的 hardhat.config.ts
 const content = fs.existsSync('hardhat.config.ts') ? fs.readFileSync('hardhat.config.ts', 'utf-8') : ''
 
@@ -61,7 +58,7 @@ async function main() {
     } finally {
         process.chdir(cwd)
         // 还原
-        cp.execSync('rm -rf contracts')
+        cp.execSync('mv contracts temp')
         cp.execSync('mv contracts-temp contracts')
 
         if (!content) {
