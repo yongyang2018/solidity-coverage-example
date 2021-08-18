@@ -42,7 +42,7 @@
     version: '2'
     services:
     cov_server:
-        image: 'yongyang2021/solidity-coverage-example:v0.0.4'
+        image: 'yongyang2021/solidity-coverage-example:v0.0.5'
         ports: 
         - 3001:3001
         volumes:   
@@ -66,7 +66,7 @@
     version: '2'
     services:
     cov_client:
-        image: 'yongyang2021/solidity-coverage-example:v0.0.4'
+        image: 'yongyang2021/solidity-coverage-example:v0.0.5'
         volumes:   
         - local:/app/local
         - artifacts:/app/artifacts
