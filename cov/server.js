@@ -6,7 +6,7 @@ const ganache = require('ganache-cli')
 
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const ganacheCfg = process.env.GANACHE_CONFIG
+const ganacheCfg = process.env.GANACHE_CONFIG || 'ganache.json'
 
 let apiCfg = {}
 
