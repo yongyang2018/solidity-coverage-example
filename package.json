@@ -18,9 +18,8 @@
   },
   "scripts": {
     "cov-server": "node cov/server.js",
-    "instrument": "node cov/instrument.js",
     "compile": "hardhat compile",
-    "cov-deploy": "npm run instrument && hardhat run scripts/deploy.ts --network cov",
+    "cov-deploy": "node cov/deploy.js",
     "clean": "rimraf ./artifacts && rimraf ./cache"
   },
   "author": "",

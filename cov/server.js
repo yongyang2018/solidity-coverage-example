@@ -9,7 +9,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const ganacheCfg = process.env.GANACHE_CONFIG
 let apiCfg = {}
 if(ganacheCfg && fs.existsSync(ganacheCfg)) {
-    apiCfg = JSON.parse(fs.readFileSync(ganacheCfg, 'utf-8'))
+    apiCfg.providerOptions = JSON.parse(fs.readFileSync(ganacheCfg, 'utf-8'))
 }
 
 // 读取 contracts 目录下所有以 .sol 结尾的文件

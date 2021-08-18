@@ -1,9 +1,9 @@
 const cp = require('child_process')
 const fs = require('fs')
-
+const CoverageAPI = require('solidity-coverage/api')
 const instrument = require('./utils')
 
-const api = new CoverageAPI(apiCfg)
+const api = new CoverageAPI()
 
 // 对代码进行插桩，把插桩后的 solidity 代码写入到 temp 文件夹下面
 instrument(api)
@@ -26,7 +26,7 @@ const covCfg = {
 
     networks: {
         cov: {
-            url: `http://${process.env.COV_HOST}:${process.env.COV_PORT}`,
+            url: `http://${process.env.COV_HOST || 'localhost'}:${process.env.COV_PORT || '3000'}`,
             accounts: [process.env.COV_KEY],
         }
     }
