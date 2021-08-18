@@ -54,8 +54,11 @@ async function main() {
         cp.execSync('npm run clean')
 
         // 部署
+        cp.execSync('mkdir -p local')
         cp.execSync('./node_modules/.bin/hardhat run scripts/deploy.ts --network cov')
     } catch (e) {
+        console.error(e)
+    } finally {
         process.chdir(cwd)
         // 还原
         cp.execSync('rm -rf contracts')
@@ -68,9 +71,9 @@ async function main() {
 
         const fd = fs.openSync('hardhat.config.ts', 'w', '0666')
         fs.writeSync(fd, content)
-        fs.closeSync(fd)
+        fs.closeSync(fd)        
     }
 }
 
 
-main().catch(console.error)
+main()

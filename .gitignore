@@ -6,3 +6,4 @@ database
 coverage.json
 artifacts
 cache
+local
