@@ -4,3 +4,5 @@ coverage
 temp
 database
 coverage.json
+artifacts
+cache
