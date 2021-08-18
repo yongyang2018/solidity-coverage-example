@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "ethers": "^5.4.4",
     "glob": "^7.1.7",
     "hardhat": "^2.6.0",
     "solidity-coverage": "^0.7.16",
