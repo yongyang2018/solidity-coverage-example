@@ -12,14 +12,16 @@
     "ethers": "^5.4.4",
     "glob": "^7.1.7",
     "hardhat": "^2.6.0",
+    "rimraf": "^3.0.2",
     "solidity-coverage": "^0.7.16",
     "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
   },
   "scripts": {
     "cov-server": "node cov/server.js",
-    "instrument": "node cov/utils.js",
-    "compile": "hardhat compile"
+    "compile": "hardhat compile",
+    "cov-deploy": "node cov/deploy.js",
+    "clean": "rimraf ./artifacts && rimraf ./cache"
   },
   "author": "",
   "license": "ISC"

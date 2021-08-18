@@ -8,4 +8,6 @@ ADD . /app
 # keep the solidity compiler cached in the image
 RUN npm run compile 
 EXPOSE 3000
-ENTRYPOINT [ "npm", "run", "ganache"]
+
+# start coverage server
+ENTRYPOINT [ "npm", "run", "cov-server"]
