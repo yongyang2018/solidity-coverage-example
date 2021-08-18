@@ -9,6 +9,8 @@ const api = new CoverageAPI()
 // 读取原来的 hardhat.config.ts
 const content = fs.existsSync('hardhat.config.ts') ? fs.readFileSync('hardhat.config.ts', 'utf-8') : ''
 
+instrument(api)
+
 cp.execSync('mv contracts contracts-temp')
 cp.execSync('mv temp contracts')
 

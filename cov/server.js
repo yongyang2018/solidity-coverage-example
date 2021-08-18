@@ -1,8 +1,8 @@
 const CoverageAPI = require('solidity-coverage/api');
 const fs = require('fs')
-const ganache = require('ganache-cli')
 const express = require('express')
 const instrument = require('./utils')
+const ganache = require('ganache-cli')
 
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
