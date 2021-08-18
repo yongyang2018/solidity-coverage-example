@@ -1,0 +1,26 @@
+{
+  "name": "solidity-coverage-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "nyc": "^15.1.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "glob": "^7.1.7",
+    "hardhat": "^2.6.0",
+    "solidity-coverage": "^0.7.16",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "cov-server": "node cov/server.js",
+    "instrument": "node cov/utils.js",
+    "compile": "hardhat compile"
+  },
+  "author": "",
+  "license": "ISC"
+}
