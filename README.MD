@@ -6,6 +6,16 @@
 2. 部署插桩后的合约到内置的 ganache 中，ganache 会记录插桩后合约的代码执行明细
 3. 启动 express 服务, 将 / 反向代理到 ganache, 当收到 /coverage.x 请求后调 solidity-coverage 的 api 生成报告，重定向到报告页面
 
+## 注意事项
+
+1. **不要把插桩后的合约代码部署到公链环境**
+
+   插桩后的代码在执行过程中会多出很多 gas 消耗
+   
+2. **部署到公链环境时，不要调用 npm run cov-deploy**
+
+   原因同上
+
 
 ## 效果图
 
