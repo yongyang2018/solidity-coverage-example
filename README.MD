@@ -54,7 +54,7 @@
         
 2. 利用 docker 容器部署合约到刚才启动的服务端
 
-   1. 配置环境变量 COV_HOST=192.168.1.1, 这里不建议填写 localhost，因为 docker 容器默认不是 host 模式
+   1. 配置环境变量 COV_HOST=192.168.1.1, 这里不建议填写 localhost，因为 docker 容器默认不是 host 模式, mac 用户需要填 host.docker.internal
    2. 配置环境变量 COV_PORT=3001, 这里对应服务端的 IP
    3. 配置环境变量 COV_KEY=**, 填写开发者账号
    4. 映射 local 文件夹到容器中，接受部署合约完成后的地址
