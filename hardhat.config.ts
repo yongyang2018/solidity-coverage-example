@@ -1,3 +1,5 @@
+import "@nomiclabs/hardhat-ethers"
+
 export default {
   solidity: {
     version: '0.8.0',
@@ -5,5 +7,7 @@ export default {
       optimizer: { enabled: false },
       evmVersion: 'istanbul',
     },
-  }
+  },
+
+  
 };
