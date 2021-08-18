@@ -77,4 +77,4 @@
         entrypoint: 'npm run cov-deploy'
     ```  
 
-3. 第2步的容器停止后，完成后访问 http://localhost:3001/coverage.x，可以看到合约的构造器已经被调用过一次
+3. 第2步的容器停止后，完成后访问 ```http://localhost:3001/coverage.x```， 可以看到合约的构造器已经被调用过一次
